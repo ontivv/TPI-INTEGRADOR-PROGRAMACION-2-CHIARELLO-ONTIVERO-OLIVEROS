@@ -40,46 +40,46 @@ public class Producto extends Base {
     }
 
     //setters
-    private void setNombre(String nombre) throws ValidacionEntradaException {
+    public void setNombre(String nombre) throws ValidacionEntradaException {
         if (nombre == null || nombre.trim().isEmpty()) {
             throw new ValidacionEntradaException("Error: El nombre del producto es obligatorio.");
         }
         this.nombre = nombre;
     }
 
-    private void setPrecio(Double precio) throws ValidacionEntradaException {
+    public void setPrecio(Double precio) throws ValidacionEntradaException {
         if (precio == null || precio < 0) {
             throw new ValidacionEntradaException("Error: El precio no puede ser menor a 0.");
         }
         this.precio = precio;
     }
 
-    private void setDescripcion(String descripcion) throws ValidacionEntradaException {
+    public void setDescripcion(String descripcion) throws ValidacionEntradaException {
         if (descripcion == null || descripcion.trim().isEmpty()) {
             throw new ValidacionEntradaException("Error: La descripcion del producto es obligatoria.");
         }
         this.descripcion = descripcion;
     }
 
-    private void setStock(int stock) throws StockInvalidoException {
+    public void setStock(int stock) throws StockInvalidoException {
         if (stock < 0) {
             throw new StockInvalidoException("Error: El stock no puede ser negativo.");
         }
         this.stock = stock;
     }
 
-    private void setImagen(String imagen) throws ValidacionEntradaException {
+    public void setImagen(String imagen) throws ValidacionEntradaException {
         if (imagen == null || imagen.trim().isEmpty()) {
             throw new ValidacionEntradaException("Error: La imagen del producto es obligatoria.");
         }
         this.imagen = imagen;
     }
 
-    private void setDisponible(Boolean disponible) {
+    public void setDisponible(Boolean disponible) {
         if (disponible != null) this.disponible = disponible;
     }
 
-    private void setCategoria(Categoria categoria) {
+    public void setCategoria(Categoria categoria) {
         if (categoria != null) this.categoria = categoria;
     }
 
