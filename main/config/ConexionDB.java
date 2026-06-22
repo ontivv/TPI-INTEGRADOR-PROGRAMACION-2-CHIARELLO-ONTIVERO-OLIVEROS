@@ -7,14 +7,14 @@ import java.sql.SQLException;
 public class ConexionDB {
     private static final String URL = "jdbc:mysql://localhost:3306/food_store";
     private static final String USER = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "9708Jst_";
 
     private static Connection conexion = null;
 
     private ConexionDB() {
     }
 
-    public static Connection getConexion() {
+    public static Connection getConexion() throws SQLException {
         try {
             if (conexion == null || conexion.isClosed()) {
                 Class.forName("com.mysql.cj.jdbc.Driver");

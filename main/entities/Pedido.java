@@ -4,6 +4,8 @@ import enums.Estado;
 import enums.FormaPago;
 import exceptions.StockInvalidoException;
 import exceptions.ValidacionEntradaException;
+import interfaces.Calculable;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -95,7 +97,7 @@ public class Pedido extends Base implements Calculable {
         this.formaPago = formaPago;
     }
 
-    public void setEstado(Estado estado) {
+    public void setEstado(Estado estado) throws ValidacionEntradaException {
         if (formaPago == null) {
             throw new ValidacionEntradaException("Error: El estado es obligatorio.");
         }

@@ -23,7 +23,7 @@ public class Usuario extends Base {
         setRol(rol);
     }
 
-    //  NUEVO - CONSTRUCTOR PARA JDBC
+    //  CONSTRUCTOR PARA JDBC
     public Usuario(Long id, boolean eliminado, LocalDateTime createAt, String nombre, String apellido, String mail, String celular, String contraseña, Rol rol) throws ValidacionEntradaException {
         this.setId(id);
         this.setEliminado(eliminado);
@@ -103,6 +103,7 @@ public class Usuario extends Base {
     public Rol getRol() {
         return rol;
     }
+
     //ToString
     @Override
     public String toString() {
